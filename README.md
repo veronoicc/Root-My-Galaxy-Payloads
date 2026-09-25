@@ -26,6 +26,7 @@ It intentionally does not contain Android application source code.
 | `q4q-F9360ZCSAIZF1` | Galaxy Z Fold4 `SM-F9360` | `5.10.236` | Device-tested |
 | `dm2q-S916BXXSAFZG1` | Galaxy S23+ `SM-S916B` | `5.15.189` | Experimental: hardware root from ADB shell; not in app feed |
 | `dm3q-S918BXXSAFZF5` | Galaxy S23 Ultra `SM-S918B` | `5.15.189` | Confirmed working: full chain through the app (Shizuku mode) incl. KernelSU late-load and granted `su` |
+| `r9q-G990BXXSHIYK2` | Galaxy S21 FE 5G `SM-G990B` | `5.4.289` | Static-analysis and build verified; **not** device-tested |
 
 The S916B FZG1 profile is shell-only today. Its exact tracefs route works from `adb shell`, but direct app-domain execution is not supported. Root My Galaxy would need to delegate the native runner through an authorized shell bridge such as Shizuku. See [`artifacts/dm2q-S916BXXSAFZG1/README.md`](artifacts/dm2q-S916BXXSAFZG1/README.md).
 
@@ -99,5 +100,8 @@ The SM-A536E GZG3 device validation is in
 [`docs/SM-A536E-A536EXXSNGZG3.md`](docs/SM-A536E-A536EXXSNGZG3.md).
 The SM-S9280 China (CHC) DZF2 port and validation record is in
 [`docs/SM-S9280-S9280ZCS6DZF2.md`](docs/SM-S9280-S9280ZCS6DZF2.md).
+The SM-G990B (Galaxy S21 FE 5G, Snapdragon 888, 5.4.289) port — the first
+5.4 `LEGACY` `rt_mutex_waiter` target — is in
+[`docs/SM-G990B-G990BXXSHIYK2.md`](docs/SM-G990B-G990BXXSHIYK2.md).
 
 Use only on devices you own or are explicitly authorized to test.
